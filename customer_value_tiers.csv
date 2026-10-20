@@ -1,0 +1,4 @@
+value tier,customers,median value (NTD),break-even churn probability,share contacted,precision of contacted
+Low value,10107,594,0.253,0.345,0.796
+Mid value,10107,843,0.178,0.711,0.595
+High value,10107,936,0.16,0.627,0.627

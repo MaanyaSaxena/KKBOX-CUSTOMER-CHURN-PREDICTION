@@ -1,0 +1,2 @@
+cohort_n,events,event_rate,c_index_test,time_definition
+121248,57949,0.4779377804169966,0.8954971819555927,first observed transaction to last_expire proxy for events; resolution cutoff for censored observations

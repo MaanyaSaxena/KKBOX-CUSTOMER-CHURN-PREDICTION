@@ -270,7 +270,32 @@ The SQL filenames are a suggested structure based on the current workflow; align
 
 The notebook's export section may skip an output if its source dataframe is unavailable. Confirm actual files after running the notebook; this README does not imply every listed artifact already exists.
 
-## 19. Skills Demonstrated
+## 19. Dashboard Pages
+
+### 1. Executive Churn Overview
+
+Compares the forecasting models using WMAPE, MAE, RMSE, and model ranking.
+
+**Primary question:**  
+> How effectively can we predict customer churn, and which model performs best?
+![Executive Churn Overview](diagrams/Executive_Churn_Overview.png)
+Gradient Boosting achieved the highest observed performance in the current comparison, with a ROC-AUC of 0.926 and PR-AUC of 0.879. Logistic Regression is a competitive alternative, with a ROC-AUC of 0.900 and PR-AUC of 0.818. The top-decile precision KPI shows 97.7%, but this should be verified against the selected model and its evaluation protocol before reporting it as the model's performance.
+
+View the [live interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/maanya.saxena/viz/CustomerChurnAnalysis_17924841151790/ExecutiveChurnOverview).
+
+### 2. Churn Drivers & Retention Strategy
+
+Shows service-level feasibility, inventory cost, holding vs. stockout cost,
+and the realized cost impact of the optimized allocation.
+
+**Primary question:**  
+> Which retention policy offers the best estimated economic return while reducing outreach workload?
+![Churn Drivers & Retention Strategy](diagrams/Churn_Drivers_&_Retention_Strategy.png)
+The value-based retention policy reports the highest estimated net gain of 1,331,257 while contacting 17,004 customers, approximately 44% fewer than the 30,321 customers contacted under the full at-risk-pool policy. It reports outreach cost of 510,120 and estimated revenue saved of 1,841,377. These are modelled estimates based on the project's assumptions, not experimentally confirmed retention outcomes.
+View the [live interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/maanya.saxena/viz/SurvivalAnalysis_17924939558530/ChurnDriversRetentionStrategy?publish=yes).
+
+
+## 20. Skills Demonstrated
 
 - SQL data preparation and feature engineering
 - Data-quality checks and label validation
@@ -287,19 +312,4 @@ The notebook's export section may skip an output if its source dataframe is unav
 - Dashboard planning, aggregate export, and privacy-aware reporting
 - Communicating assumptions, limitations, and uncertainty
 
-## 20. Reproducibility
 
-1. Obtain the KKBox data from its authorized source and place it in the configured data directory.
-2. Open the notebook in Google Colab or a compatible Jupyter environment.
-3. Confirm the data directory, SQL directory, dependencies, and output paths.
-4. Run the notebook from top to bottom in a fresh runtime.
-5. Recheck model metrics, test-set consistency, survival diagnostics, and retention-scenario arithmetic.
-6. Run the public-export privacy audit and inspect generated/copied/skipped files.
-7. Connect only reviewed aggregate exports to Tableau.
-8. Update this README if the final run changes metrics or artifacts.
-
-Environment-specific paths such as `/content/data` may need adjustment outside Google Colab.
-
-## Portfolio Takeaway
-
-This project connects SQL-based customer data preparation with churn modeling, model evaluation, customer prioritization, scenario-based retention economics, and business-facing dashboard planning. Its contribution is not simply a high model score: it translates a risk-ranking problem into explicit retention decisions while making assumptions and limitations visible.

@@ -278,7 +278,7 @@ Compares the forecasting models using WMAPE, MAE, RMSE, and model ranking.
 
 **Primary question:**  
 > How effectively can we predict customer churn, and which model performs best?
-![Executive Churn Overview](diagrams/Executive_Churn_Overview.png)
+![Executive Churn Overview](diagrams/ExecutiveChurnOverview.png)
 Gradient Boosting achieved the highest observed performance in the current comparison, with a ROC-AUC of 0.926 and PR-AUC of 0.879. Logistic Regression is a competitive alternative, with a ROC-AUC of 0.900 and PR-AUC of 0.818. The top-decile precision KPI shows 97.7%, but this should be verified against the selected model and its evaluation protocol before reporting it as the model's performance.
 
 View the [live interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/maanya.saxena/viz/CustomerChurnAnalysis_17924841151790/ExecutiveChurnOverview).
@@ -290,7 +290,7 @@ and the realized cost impact of the optimized allocation.
 
 **Primary question:**  
 > Which retention policy offers the best estimated economic return while reducing outreach workload?
-![Churn Drivers & Retention Strategy](diagrams/Churn_Drivers_&_Retention_Strategy.png)
+![Churn Drivers & Retention Strategy](diagrams/ChurnDrivers&RetentionStrategy.png)
 The value-based retention policy reports the highest estimated net gain of 1,331,257 while contacting 17,004 customers, approximately 44% fewer than the 30,321 customers contacted under the full at-risk-pool policy. It reports outreach cost of 510,120 and estimated revenue saved of 1,841,377. These are modelled estimates based on the project's assumptions, not experimentally confirmed retention outcomes.
 View the [live interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/maanya.saxena/viz/SurvivalAnalysis_17924939558530/ChurnDriversRetentionStrategy?publish=yes).
 
